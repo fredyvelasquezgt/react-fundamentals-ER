@@ -5,13 +5,13 @@ import * as React from 'react'
 import '../box-styles.css'
 
 
+function Box(props) {
+  return <div {...props} />
+}
 
-
-
-
-const smallBox = <div style={{backgroundColor:'skyblue', fontStyle:'italic'}} className="box box--small" >small lightblue box</div>
-const mediumBox = <div style={{backgroundColor:'pink', fontStyle:'italic'}} className="box box--medium">medium pink box</div>
-const largeBox = <div style={{backgroundColor:'orange', fontStyle:'italic'}} className="box box--large" >large orange box</div>
+const smallBox = <Box style={{backgroundColor:'skyblue', fontStyle:'italic'}} className="box box--small" >small lightblue box</Box>
+const mediumBox = <Box style={{backgroundColor:'pink', fontStyle:'italic'}} className="box box--medium">medium pink box</Box>
+const largeBox = <Box style={{backgroundColor:'orange', fontStyle:'italic'}} className="box box--large" >large orange box</Box>
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
       {smallBox}
       {mediumBox}
       {largeBox}
+      <Box />
     </div>
   )
 }
