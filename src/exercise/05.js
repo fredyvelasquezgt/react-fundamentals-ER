@@ -5,8 +5,8 @@ import * as React from 'react'
 import '../box-styles.css'
 
 
-function Box(props) {
-  return <div {...props} />
+function Box({className, ...otherProps}) {
+  return <div  className={`box ${className}`} {...otherProps} />
 }
 
 const smallBox = <Box style={{backgroundColor:'skyblue', fontStyle:'italic'}} className="box box--small" >small lightblue box</Box>
@@ -19,7 +19,6 @@ function App() {
       {smallBox}
       {mediumBox}
       {largeBox}
-      <Box />
     </div>
   )
 }
